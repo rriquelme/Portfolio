@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timeline</title>
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #ccc;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ccc;
+            top: 10px;
+            left: 50%;
+            margin-left: -10px;
+        }
+        .timeline-content {
+            position: relative;
+            margin-left: 30px;
+        }
+        .timeline-content h2 {
+            font-size: 20px;
+            margin-top: 0;
+        }
+        .timeline-content p {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h2>Event 1</h2>
+                <p>Description of Event 1</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h2>Event 2</h2>
+                <p>Description of Event 2</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h2>Event 3</h2>
+                <p>Description of Event 3</p>
+            </div>
+        </div>
+        <!-- Add more timeline items as needed -->
+    </div>
+</body>
+</html>
