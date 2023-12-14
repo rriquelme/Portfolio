@@ -3,9 +3,17 @@
 <head>
     <title>Timeline</title>
     <style>
+        h1 {
+            position: relative;
+            max-width: 1200px;
+            min-width: 200;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
         .timeline {
             position: relative;
             max-width: 1200px;
+            min-width: 200px;
             margin: 0 auto;
         }
         .timeline::after {
@@ -15,8 +23,8 @@
             background-color: #ccc;
             top: 0;
             bottom: 0;
-            left: -5%;
-            margin-left: -1px;
+            left: 0%;
+            margin-left: 4px;
         }
         .timeline-item {
             position: relative;
@@ -30,12 +38,12 @@
             border-radius: 50%;
             background-color: #ccc;
             top: 0px;
-            left: -5%;
-            margin-left: -10px;
+            left: 0%;
+            margin-left: -5px;
         }
         .timeline-content {
             position: relative;
-            margin-left: auto; /* Updated */
+            margin-left: 20px; /* Updated */
             margin-right: 30px; /* Added */
             text-align: left; /* Added */
         }
@@ -49,10 +57,11 @@
     </style>
 </head>
 <body>
+    <h1>Timeline</h1>
     <div class="timeline">
         <div class="timeline-item">
             <div class="timeline-content">
-                <h2>2023 - Electronic Engineer - DCS Engineering</h2>
+                <h2>2023 - Electronic Engineer - <a href="http://dcs.cl/" > DCS Engineering</a></h2>
                 <p>
                     ▪	Python programmer, using machine learning to generate models, to estimate real and theorical efficiency of a hydroelectric power plant.<br>
                     ▪	Design the architecture to extract, process and report the data into Power BI.
@@ -61,7 +70,7 @@
         </div>
         <div class="timeline-item">
             <div class="timeline-content">
-                <h2>Certification: Applied Data Science Program - MIT Professional Education</h2>
+                <h2>2023 - Certification: Applied Data Science Program - MIT Professional Education</h2>
                 <p>
                     
                 </p>
@@ -69,10 +78,26 @@
         </div>
         <div class="timeline-item">
             <div class="timeline-content">
-                <h2>Event 3</h2>
-                <p>Description of Event 3</p>
+                <h2>2022 - R&D Engineer - <a href="https://www.qscire.com/en/">qScire</a></h2>
+                <p>
+                    ▪	Python and Cython programmer, developing Quantum Interconnect Explorer (QIE) software.<br>
+                    ▪	Test-driven development writing unit test in Pytest, using Bitbucket.<br>
+                    ▪	Create documentation of libraries and improvements implemented for internal use. <br>
+                    ▪	qScire has been selected as one of the honorary mentions of the Tech Innovation Excellence (TIE) Award at Taiwan InnoTech Expo (October 2022).
+                </p>
             </div>
         </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h2>2018 &rarr; 2022 - R&D Engineer - <a href="https://www.synopsys.com/">Synopsys</a></a> </h2>
+                <p>
+                    ▪	Automate the process of testing, data extraction, data analysis, reporting and data visualization, to create an integration with the Jira APIs and internal processes to track issues and projects. <br>
+                    ▪	Write optimized scripts in Python, TCL and CSH, for data-heavy & processing heavy task automation for accurate analytics and utilizing source code management like GIT and Perforce.<br>
+                    ▪	Created training material and teach new members of the team, to reduce the training time of new employees.<br>
+                    ▪	Quality Assurance for Fusion Compiler, since the availability of the tool in 2019 more than 500 tape-outs have been achieved (between 40 nm and 3 nm), the tool is used by ARM, AMD, Samsung, Renesas and others.
+      
+                </p>
+            </div>
         <!-- Add more timeline items as needed -->
     </div>
 </body>
