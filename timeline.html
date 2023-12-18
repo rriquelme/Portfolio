@@ -144,13 +144,22 @@
             justify-content: flex-start;
             text-align: center;
         }
+        .slow-ani > * {
+            animation-duration:5s;
+        }
 
     </style>
 </head>
 <body>
 
 <div class="about-me">
-    <h1>About Me</h1>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" ></script>
+    <h1><span class="cogs slow-ani">
+        <i class="fas fa-cog fa-1x fa-spin" style="font-size: 15px;" data-fa-transform="down-10 right-4"></i>
+        <i class="fas fa-cog fa-1x fa-spin" style="font-size: 20px;" data-fa-transform="up-10 left-7"></i>
+        <i class="fas fa-cog fa-1x fa-spin" style="font-size: 25px;" data-fa-transform="down-10 left-20"></i>
+        </span>About Me</h1>
+    
     <p>
         Hi, I'm Roberto! I'm a Electronic Engineer with a keen interest in various technologies and programming languages. I love exploring new concepts, solving complex problems, and continuously learning to improve my skills.
     </p>
@@ -162,6 +171,8 @@
         <li>Cloud development</li>
         <li>Docker</li>
     </ul>
+    <h1>Projects</h1>
+
     <div class="contact-information">
         <h2>Contact Information</h2>
         <p>
