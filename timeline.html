@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Timeline</title>
     <style>
         h1 {
@@ -10,11 +11,27 @@
             margin: 0 auto;
             margin-bottom: 20px;
         }
+        body{
+            position: relative;
+            max-width: 1200px;
+            min-width: 200px;
+            margin: 0 auto;
+            display: flex; /* Added */
+        }
         .timeline {
             position: relative;
             max-width: 1200px;
             min-width: 200px;
             margin: 0 auto;
+            /*ex: 1; /* Added */
+        }
+        .secondcolumn{
+            position: relative;
+            max-width: 1200px;
+            min-width: 200px;
+            margin: 0 auto;
+            flex: 2; /* Added */
+            padding: 20px;
         }
         .timeline::after {
             content: '';
@@ -26,7 +43,25 @@
             left: 0%;
             margin-left: 4px;
         }
+        .timeline-item-study::after {
+            content: '';
+            position: absolute;
+            width: 0px;
+            background-color: #ccc;
+            top: 0;
+            bottom: 0;
+            left: 0%;
+            margin-left: 4px;
+        }
         .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .timeline-item-work{
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .timeline-item-study{
             position: relative;
             margin-bottom: 50px;
         }
@@ -41,6 +76,32 @@
             left: 0%;
             margin-left: -5px;
         }
+        .timeline-item-study::after {
+            content: '\f19d'; /* Font Awesome icon code for circle */
+            position: absolute;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 20px;
+            color: #797979;
+            top: -10px;
+            left: -10px;
+            margin-top: 10px;
+            margin-left: 3px;
+            z-index: 2;
+        }
+        .timeline-item-work::after {
+            content: '\f0b1'; /* Font Awesome icon code for circle */
+            position: absolute;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 20px;
+            color: #797979;
+            top: -10px;
+            left: -10px;
+            margin-top: 11px;
+            margin-left: 5px;
+            z-index: 2;
+        }
         .timeline-content {
             position: relative;
             margin-left: 20px; /* Updated */
@@ -54,12 +115,74 @@
         .timeline-content p {
             margin-top: 10px;
         }
+        .about-me {
+            flex: 1; /* Added */
+            padding: 20px; /* Added */
+        }
+        .about-me h1 {
+            margin-bottom: 10px; /* Added */
+        }
+        .about-me p {
+            margin-bottom: 20px; /* Added */
+        }
+        .about-me h2 {
+            margin-top: 0; /* Added */
+        }
+        .social-icons {
+            padding: 5px; /* Added */
+            font-size: 20px; /* Added */
+        }
+        .social-list {
+            gap: 5px;
+            padding-bottom: 4px;
+            padding-left: 7px;
+            font-size: 18px;
+            text-align: center;
+            
+        }
+        .contact-information {
+            margin-top: 20px;
+            justify-content: flex-start;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Timeline</h1>
+
+<div class="about-me">
+    <h1>About Me</h1>
+    <p>
+        Hi, I'm Roberto! I'm a Electronic Engineer with a keen interest in various technologies and programming languages. I love exploring new concepts, solving complex problems, and continuously learning to improve my skills.
+    </p>
+    <h2>Interests</h2>
+    <ul>
+        <li>AWS</li>
+        <li>Embedded Systems</li>
+        <li>Artificial intelligence</li>
+        <li>Cloud development</li>
+        <li>Docker</li>
+    </ul>
+    <div class="contact-information">
+        <h2>Contact Information</h2>
+        <p>
+            robert.riquelme.saez@gmail.com <br>
+            +61 422865586 <br>
+            Perth, Australia
+        </p>
+    </div>  
+    <div class="social-list">
+        <a class="social-icons" href="https://www.github.com/rriquelme" target="_blank"><i class="fab fa-github" style="color: black;"></i></a> <!-- Updated -->
+        <a class="social-icons" href="https://www.linkedin.com/in/robertriquelmesaez" target="_blank"><i class="fab fa-linkedin" style="color: black;"></i></a> <!-- Updated -->
+        <a class="social-icons" href="https://www.instagram.com/rers92" target="_blank"><i class="fab fa-instagram" style="color: black;"></i></a> <!-- Updated -->
+    </div>
+    
+</div>
+    </div>
+    <div class="secondcolumn">
+        <h1>Timeline</h1>
     <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item-work">
             <div class="timeline-content">
                 <h2>2023 - Electronic Engineer - <a href="http://dcs.cl/" > DCS Engineering</a></h2>
                 <p>
@@ -68,15 +191,15 @@
                 </p>
             </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item-study">
             <div class="timeline-content">
-                <h2>2023 - Certification: Applied Data Science Program - MIT Professional Education</h2>
+                <h2>2023 - Applied Data Science Program - MIT Professional Education</h2>
                 <p>
                     
                 </p>
             </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item-work">
             <div class="timeline-content">
                 <h2>2022 - R&D Engineer - <a href="https://www.qscire.com/en/">qScire</a></h2>
                 <p>
@@ -87,7 +210,7 @@
                 </p>
             </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item-work">
             <div class="timeline-content">
                 <h2>2018 &rarr; 2022 - Senior R&D Engineer - <a href="https://www.synopsys.com/">Synopsys</a></a> </h2>
                 <p>
@@ -99,16 +222,17 @@
                 </p>
             </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item-work">
             <div class="timeline-content">
                 <h2> 2017 - Electronic Engineer - Gosafe</h2>
                 <p>
                 ▪	Developed an Android application and a prototype device able to send an emergency signal for a Neighborhood support network, for the Chilean project “Impacta Seguridad” neighborhood, contest made by the Government of Chile. <br>
                 ▪	Awarded with USD10.000 granted for prototype development, the prototype was validated with the community.
                 </p>
+            </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item-work">
             <div class="timeline-content">
                 <h2>2016 &rarr; 2017 - Embedded Engineer - <a href="https://www.lind.global/">Lind Engineering</a></h2>
 
@@ -122,9 +246,9 @@
 
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item-work">
             <div class="timeline-content">
-                <h2>2016 Electronic Engineer - DCS Engineerring </h2>   
+                <h2>2016 - Electronic Engineer - <a href="http://dcs.cl/">DCS Engineerring </a></h2>   
 
                 <p>
                 ▪	Analyzed process flow diagrams to configure new equipment to be installed.<br>
@@ -133,7 +257,23 @@
                 </p>
             </div>
         </div>
-        <!-- Add more timeline items as needed -->
+        <div class="timeline-item-study">
+            <div class="timeline-content">
+                <h2>2016 - Electronic Engineer - University of Concepcion</h2>   
+                <p>
+                </p>
+            </div>
+        </div>
+        <div class="timeline-item-study">
+            <div class="timeline-content">
+                <h2>2013 - Bachelor of Engineering Science - University of Concepcion</h2>   
+                <p>
+                    
+
+                </p>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
 </html>
