@@ -1,4 +1,4 @@
 # Personal portfolio
 
 ## TODO:
-- add webscrapping projects
+- Add Projects, remove legacy website things.
